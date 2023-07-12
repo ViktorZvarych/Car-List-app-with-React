@@ -1,0 +1,27 @@
+.modal-container {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 4;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.list-modal {
+  height: 80%;
+  width: 80%;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10% 10%;
+  padding: 1rem;
+  background-color: #fff;
+  overflow: hidden;
+}

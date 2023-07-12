@@ -1,0 +1,7 @@
+.car-search-table.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(44, 250, 17, 0.11);
+}
+
+.car-search-table.table-dark.table-striped tbody tr:nth-of-type(even) {
+    background-color: rgba(253, 249, 34, 0.164);
+}

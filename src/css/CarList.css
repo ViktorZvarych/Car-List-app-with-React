@@ -1,0 +1,13 @@
+.car-list {
+  width: 90%;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.car-list-title {
+  text-align: center;
+}
+.car-table {
+    width: 90%;
+    margin: 1rem auto;
+}

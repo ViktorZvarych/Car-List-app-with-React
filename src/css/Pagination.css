@@ -1,0 +1,11 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.page-link {
+  width: 50px;
+}
