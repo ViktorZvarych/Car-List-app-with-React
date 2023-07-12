@@ -1,3 +1,4 @@
+
 .car-list {
   width: 90%;
   z-index: 1;
@@ -6,7 +7,15 @@
 
 .car-list-title {
   text-align: center;
+  margin-top: 2rem;
 }
+
+.car-list-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
 .car-table {
     width: 90%;
     margin: 1rem auto;

@@ -45,7 +45,14 @@ export default function CarList() {
   }, [isSaved, carData.length]);
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
+    const totalPages = Math.ceil(carData.length / carsPerPage);
+    if (page < 1) {
+      setCurrentPage(1);
+    } else if (page > totalPages) {
+      setCurrentPage(totalPages);
+    } else {
+      setCurrentPage(page);
+    }
   };
 
   const indexOfLastCar = currentPage * carsPerPage;
@@ -100,54 +107,56 @@ export default function CarList() {
   ));
 
   return (
-    <div className="car-list">
-      <h1 className="car-list-title">Car List</h1>
-      <CarSearch
-        carData={carData}
-        handleActionChange={handleActionChange}
-        setSelectedCar={setSelectedCar}
-        setAction={setAction}
-      />
-      {searchQuery === "" && (
-        <>
-          <button className="add-car-button" onClick={openAddCarModal}>
+    <>
+      <header>
+        <h1 className="car-list-title">Car List</h1>
+        <nav className="car-list-nav">
+          <button className="add-car-btn btn" onClick={openAddCarModal}>
             Add Car
           </button>
-          <table
-            id="carTable"
-            className="car-table table table-striped table-dark"
-          >
-            <thead>
-              <tr>
-                <th>Company</th>
-                <th>Model</th>
-                <th>VIN</th>
-                <th>Color</th>
-                <th>Year</th>
-                <th>Price</th>
-                <th>Availability</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>{tableRows}</tbody>
-          </table>
-          <Pagination
-            totalCars={carData.length}
-            carsPerPage={carsPerPage}
-            onPageChange={handlePageChange}
+          <CarSearch
+            carData={carData}
+            handleActionChange={handleActionChange}
+            setSelectedCar={setSelectedCar}
+            setAction={setAction}
           />
-        </>
-      )}
-      {(selectedCar || action === "add" || isAddingCar) && (
-        <Modal
-          car={selectedCar}
-          mode={action}
-          onClose={onClose}
-          closeAddCarModal={closeAddCarModal}
-          carData={carData} // Pass the carData prop
-          setCarData={setCarData} // Pass the setCarData prop
+        </nav>{" "}
+      </header>
+      <main className="car-list">
+        <table
+          id="carTable"
+          className="car-table table table-striped table-dark"
+        >
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Model</th>
+              <th>VIN</th>
+              <th>Color</th>
+              <th>Year</th>
+              <th>Price</th>
+              <th>Availability</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>{tableRows}</tbody>
+        </table>
+        <Pagination
+          totalCars={carData.length}
+          carsPerPage={carsPerPage}
+          onPageChange={handlePageChange}
         />
-      )}
-    </div>
+        {(selectedCar || action === "add" || isAddingCar) && (
+          <Modal
+            car={selectedCar}
+            mode={action}
+            onClose={onClose}
+            closeAddCarModal={closeAddCarModal}
+            carData={carData} // Pass the carData prop
+            setCarData={setCarData} // Pass the setCarData prop
+          />
+        )}
+      </main>
+    </>
   );
 }

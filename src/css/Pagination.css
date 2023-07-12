@@ -9,3 +9,7 @@
 .page-link {
   width: 50px;
 }
+
+li.page-item.active .page-link {
+  background-color: #32383e;
+}

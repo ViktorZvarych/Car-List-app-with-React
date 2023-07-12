@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Search.css";
+import "../css/CarSearch.css";
 
 export default function CarSearch({ carData, setSelectedCar, setAction }) {
   const [searchQuery, setSearchQuery] = useState("");

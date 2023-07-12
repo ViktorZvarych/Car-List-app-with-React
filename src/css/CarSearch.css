@@ -1,0 +1,18 @@
+.car-search-table.table-dark.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(44, 250, 17, 0.11);
+}
+
+.car-search-table.table-dark.table-striped tbody tr:nth-of-type(even) {
+  background-color: rgba(253, 249, 34, 0.164);
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #32383e;
+  box-shadow: 0 0 0 0.2rem rgba(62, 72, 83, 0.25);
+}
+
+.form-inline {
+  margin: 1rem;
+}

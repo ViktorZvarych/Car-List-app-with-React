@@ -1,3 +1,8 @@
+li {
+  list-style: none;
+  text-align: right;
+}
+
 .modal-container {
   height: 100%;
   width: 100%;
@@ -13,7 +18,7 @@
 
 .list-modal {
   height: 80%;
-  width: 80%;
+  width: 60%;
   position: fixed;
   z-index: 5;
   left: 0;
@@ -24,4 +29,26 @@
   padding: 1rem;
   background-color: #fff;
   overflow: hidden;
+}
+
+.list-modal-content {
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+}
+
+.btn {
+  margin: 1rem;
+  width: 7rem;
+  background-color: transparent;
+  border: 1px solid #32383e;
+  border-radius: 5px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: #32383e;
+}
+
+.btn:hover {
+border-color: #32383e;
+    box-shadow: 0 0 0 0.2rem rgba(62, 72, 83, 0.25);
 }

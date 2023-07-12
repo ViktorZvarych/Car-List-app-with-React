@@ -209,7 +209,7 @@ export default function Modal({
               )}
               {mode === "add" && (
                 <button className="btn" onClick={handleAddCar} type="submit">
-                  Add new car
+                  Add car
                 </button>
               )}
               {mode === "add" && (
