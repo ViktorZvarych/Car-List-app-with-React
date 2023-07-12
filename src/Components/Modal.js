@@ -18,7 +18,7 @@ export default function Modal({
   const [availability, setAvailability] = useState(
     car ? car.availability?.toString() : ""
   );
-  const [action, setAction] = useState("");
+  // const [action, setAction] = useState("");
   const [isSaved, setIsSaved] = useState(false);
 
   const handleSave = (event) => {
