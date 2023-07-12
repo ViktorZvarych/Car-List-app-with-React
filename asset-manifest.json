@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Car-List-app-with-React/static/css/main.fbffae5f.css",
+    "main.js": "/Car-List-app-with-React/static/js/main.622c4f6c.js",
+    "static/js/787.7f320c1d.chunk.js": "/Car-List-app-with-React/static/js/787.7f320c1d.chunk.js",
+    "index.html": "/Car-List-app-with-React/index.html",
+    "main.fbffae5f.css.map": "/Car-List-app-with-React/static/css/main.fbffae5f.css.map",
+    "main.622c4f6c.js.map": "/Car-List-app-with-React/static/js/main.622c4f6c.js.map",
+    "787.7f320c1d.chunk.js.map": "/Car-List-app-with-React/static/js/787.7f320c1d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbffae5f.css",
+    "static/js/main.622c4f6c.js"
+  ]
+}
