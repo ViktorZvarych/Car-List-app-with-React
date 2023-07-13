@@ -107,10 +107,29 @@ export default function Modal({
   return (
     <div className="modal-container">
       <div className="list-modal">
+        <div className="btn-x-container">
+          {mode === "add" && (
+          <button
+            className="btn btn-x"
+            onClick={closeAddCarModal}
+            type="button"
+          >
+            X
+          </button>
+        )}
+        {mode !== "add" && (
+          <button className="btn btn-x" onClick={onClose} type="button">
+            X
+          </button>
+        )}
+        </div>
+        
         <form className="list-modal-content">
-          {mode === "edit" && <h2>Edit car</h2>}
-          {mode === "delete" && <h2>Delete car</h2>}
-          {mode === "add" && <h2>Add new car</h2>}
+          {mode === "edit" && <h2 className="list-modal-title">Edit car</h2>}
+          {mode === "delete" && (
+            <h2 className="list-modal-title">Delete car</h2>
+          )}
+          {mode === "add" && <h2 className="list-modal-title">Add new car</h2>}
           <ul>
             <li>
               <label htmlFor="company">Company:</label>

@@ -15,4 +15,12 @@
 
 .form-inline {
   margin: 1rem;
+  display: flex;
+justify-content: center;
+}
+
+.car-search-table {
+    width: 90%;
+    margin: 1rem auto;
+    
 }

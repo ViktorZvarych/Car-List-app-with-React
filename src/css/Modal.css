@@ -1,6 +1,11 @@
 li {
   list-style: none;
   text-align: right;
+  margin-bottom: 0.5rem
+}
+
+label {
+  margin-right: 0.5rem
 }
 
 .modal-container {
@@ -17,18 +22,23 @@ li {
 }
 
 .list-modal {
-  height: 80%;
-  width: 60%;
+  height: 85%;
+  width: 70%;
   position: fixed;
   z-index: 5;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  margin: 10% 10%;
+  margin: auto;
   padding: 1rem;
   background-color: #fff;
-  overflow: hidden;
+  border-radius: 3%;
+  overflow: auto;
+}
+
+.list-modal-title {
+  margin-bottom: 2rem;
 }
 
 .list-modal-content {
@@ -41,7 +51,7 @@ li {
   margin: 1rem;
   width: 7rem;
   background-color: transparent;
-  border: 1px solid #32383e;
+  border: 3px solid #32383e;
   border-radius: 5px;
   -webkit-transition: all .15s ease-in-out;
   transition: all .15s ease-in-out;
@@ -50,5 +60,22 @@ li {
 
 .btn:hover {
 border-color: #32383e;
-    box-shadow: 0 0 0 0.2rem rgba(62, 72, 83, 0.25);
+    box-shadow: 0 0 0 0.3rem rgba(62, 72, 83, 0.25);
+}
+
+.add-car-btn {
+  align-self: flex-start;
+  margin-left: 3rem;
+}
+
+.btn-x-container {
+  display: flex;
+  justify-content: end;
+}
+
+.btn-x {
+  width: 40px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }

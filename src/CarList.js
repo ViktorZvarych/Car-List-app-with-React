@@ -18,7 +18,7 @@ export default function CarList() {
     setAction("");
   };
 
-  const carsPerPage = 20;
+  const carsPerPage = 15;
 
   // Fetch car data from the API or local storage
   useEffect(() => {

@@ -13,7 +13,6 @@
 .car-list-nav {
   display: flex;
   flex-direction: column;
-  align-items: end;
 }
 
 .car-table {
